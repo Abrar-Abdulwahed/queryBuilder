@@ -1,6 +1,5 @@
 <?php
 
-require_once('SelectQuery.php');
 require_once('DBConnection.php');
 
 class QueryBuilder
