@@ -14,17 +14,11 @@ final class DBConnection
         try {
             if (!self::isConnected()) {
                 self::$PDO = new PDO(self::DSN, self::USER, self::PASSWORD);
-                self::$PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                return self::getPDO();
+                return self::$PDO;
             }
         } catch (PDOException $error) {
             echo $error->getMessage();
         }
-    }
-
-    public static function getPDO()
-    {
-        return self::$PDO;
     }
 
     private static function isConnected()
