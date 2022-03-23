@@ -7,7 +7,7 @@ final class DBConnection
     private const USER = "root";
     private const PASSWORD = "";
     private static $PDO = null;
-    private const DSN = "mysql:host=" . self::HOST . ";dbname=" . self::DB . ";";
+    private const DSN = "mysql:host=".self::HOST.";dbname=".self::DB.";";
 
     public static function connect()
     {
